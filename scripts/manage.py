@@ -18,7 +18,10 @@ def compose(*args):
 
 
 def tool(*args):
-    compose("run", "--rm", "--no-deps", "tools", "python", *args)
+    # Bind-mounted reports must remain writable by both the host and tools.
+    (ROOT / "runtime").mkdir(parents=True, exist_ok=True)
+    identity = ["--user", f"{os.getuid()}:{os.getgid()}"] if sys.platform.startswith("linux") else []
+    compose("run", "--rm", "--no-deps", *identity, "tools", "python", *args)
 
 
 def ready():

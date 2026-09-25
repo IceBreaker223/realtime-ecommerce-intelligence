@@ -40,9 +40,11 @@ def main():
             page.wait_for_timeout(8000)
         finally:
             context.close()
-            browser.close()
-        video.save_as(str(output / "commerce-pulse.webm"))
-        video.delete()
+            try:
+                video.save_as(str(output / "commerce-pulse.webm"))
+                video.delete()
+            finally:
+                browser.close()
     print(f"Saved silent dashboard walkthrough: {output / 'commerce-pulse.webm'}")
 
 

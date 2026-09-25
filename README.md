@@ -80,8 +80,9 @@ in [docs/evidence](docs/evidence), with commands to reproduce each result.
 
 [GitHub Actions](.github/workflows/ci.yml) runs a clean demo, integration tests,
 Spark checks, crash recovery, a small benchmark, and browser tests. It uploads logs,
-JSON reports, and screenshots. The workflow is provided locally; hosted execution
-must be confirmed after the repository is pushed to GitHub. No CI badge is claimed.
+JSON reports, and screenshots. See the
+[hosted verification runs](https://github.com/IceBreaker223/realtime-ecommerce-intelligence/actions/workflows/ci.yml)
+for the latest result and downloadable evidence.
 
 ## Project map
 

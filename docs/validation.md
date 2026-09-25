@@ -99,9 +99,10 @@ The [desktop](assets/dashboard-desktop.png) and [mobile](assets/dashboard-mobile
 captures use the one-hour view of the deterministic demo.
 
 The GitHub Actions workflow runs equivalent commands and uploads reports/logs.
-**Hosted CI has not been run from this workspace:** no repository was pushed during
-implementation. The workflow file is present; a successful hosted run must be
-confirmed after publication. This distinction is deliberate—there is no invented CI badge.
+The public repository now runs
+[hosted verification](https://github.com/IceBreaker223/realtime-ecommerce-intelligence/actions/workflows/ci.yml).
+The measurements above describe the local machine; hosted results and their
+downloadable artifacts are recorded separately in each workflow run.
 
 ## Detector evaluation
 

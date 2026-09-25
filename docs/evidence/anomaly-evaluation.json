@@ -1,0 +1,26 @@
+{
+  "detector_version": "statistical-v1",
+  "seed": 20260925,
+  "scenarios": 200,
+  "results": {
+    "failure_rate_spike": {
+      "tp": 100,
+      "fp": 0,
+      "fn": 0,
+      "tn": 100,
+      "abstained": 0,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "revenue_spike": {
+      "tp": 100,
+      "fp": 0,
+      "fn": 0,
+      "tn": 100,
+      "abstained": 0,
+      "precision": 1.0,
+      "recall": 1.0
+    }
+  },
+  "limitation": "Easy synthetic spikes with independent histories, not production accuracy. No seasonality, drift, or measured end-to-end delay."
+}

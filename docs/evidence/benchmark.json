@@ -1,0 +1,26 @@
+{
+  "result": "passed",
+  "run_id": "4d2ce0d3a80d4e47987406c6ffed286d",
+  "started_at": "2026-09-25T15:54:36.330292+00:00",
+  "count": 300,
+  "target_events_per_second": 20.0,
+  "publish_seconds": 14.952,
+  "actual_publish_events_per_second": 20.06,
+  "first_send_to_all_visible_seconds": 25.93,
+  "observed_completion_events_per_second": 11.57,
+  "latency_seconds": {
+    "p50": 5.259,
+    "p95": 11.48,
+    "max": 12.23
+  },
+  "poll_interval_seconds": 0.25,
+  "completed_revenue": 1465449,
+  "environment": {
+    "NCPU": 12,
+    "MemTotal": 12348694528,
+    "OperatingSystem": "Docker Desktop",
+    "Architecture": "x86_64",
+    "ServerVersion": "29.8.0"
+  },
+  "limitations": "Single paced run, warm local single-node stack. Not a saturation or sustained-capacity test. Latency is send initiation to first DB observation, including polling and Spark trigger delay."
+}

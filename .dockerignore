@@ -1,0 +1,7 @@
+.git
+.venv
+.env
+runtime
+**/__pycache__
+docs/assets
+docs/evidence

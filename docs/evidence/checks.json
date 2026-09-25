@@ -1,0 +1,13 @@
+{
+  "result": "passed",
+  "completed_at": "2026-09-25T15:58:20.627337+00:00",
+  "groups": [
+    "unit",
+    "api_postgres",
+    "detector_postgres",
+    "spark_analytics",
+    "spark_postgres",
+    "sql_reconciliation",
+    "synthetic_evaluation"
+  ]
+}

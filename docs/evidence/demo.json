@@ -1,0 +1,22 @@
+{
+  "result": "passed",
+  "unique_demo_events": 840,
+  "anchor": "2026-09-25 15:23:00+00:00",
+  "anomaly_minute": "2026-09-25 15:43:00+00:00",
+  "expected_demo_revenue": 6630400,
+  "actual_demo_revenue": "6630400.00",
+  "flagged_detectors": 2,
+  "api_summary": {
+    "order_count": 847,
+    "completed_order_count": 660,
+    "completed_revenue": "6640093.00",
+    "failed_order_count": 106,
+    "average_order_value": "10060.746969696970",
+    "failed_order_rate": "0.12514757969303423849",
+    "last_updated": "2026-09-25T15:57:12.559680Z",
+    "start": "2026-09-24T15:58:00Z",
+    "end": "2026-09-25T15:58:00Z",
+    "currency": "INR"
+  },
+  "replay_note": "Same manifest reuses the same IDs; use --new for a new history."
+}

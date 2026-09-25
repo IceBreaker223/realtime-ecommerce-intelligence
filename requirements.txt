@@ -1,0 +1,6 @@
+Faker==40.39.0
+kafka-python==3.0.11
+psycopg==3.3.6
+psycopg-binary==3.3.6
+typing_extensions==4.16.0
+tzdata==2026.4

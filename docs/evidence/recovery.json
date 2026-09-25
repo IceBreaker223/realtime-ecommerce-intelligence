@@ -1,0 +1,11 @@
+{
+  "result": "passed",
+  "queued_unique_orders": 30,
+  "kafka_messages": 60,
+  "recovered_unique_orders": 30,
+  "completed_revenue": 177441,
+  "verify_process_wait_seconds": 20.085,
+  "queued_at": "2026-09-25T15:54:07.996373+00:00",
+  "limitation": "SIGKILL with backlog and duplicate delivery; not an exhaustive fault-injection campaign.",
+  "restart_command_to_verified_seconds": 25.456
+}

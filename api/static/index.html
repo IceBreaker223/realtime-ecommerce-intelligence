@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#112823">
+  <title>Commerce Pulse · Intelligence</title>
+  <link rel="stylesheet" href="/static/styles.css">
+  <script src="/static/dashboard.js" defer></script>
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="brand" href="/" aria-label="Commerce Pulse home"><span class="brand-icon">▥</span><span>commerce<span class="brand-light">pulse</span></span></a>
+    <div class="workspace-label">INTELLIGENCE WORKSPACE</div>
+    <nav aria-label="Main navigation">
+      <a class="nav-item active" href="#overview"><span>◫</span> Overview <span class="nav-dot"></span></a>
+      <a class="nav-item" href="#performance"><span>▤</span> Performance</a>
+      <a class="nav-item" href="/docs" target="_blank" rel="noopener"><span>⌘</span> API explorer <span class="external">↗</span></a>
+    </nav>
+    <div class="sidebar-note"><span class="small-orb"></span> BUILT ON STREAMING DATA<p>From checkout events<br>to a clearer picture.</p><div class="pipeline">Kafka <span>→</span> Spark <span>→</span> PostgreSQL</div></div>
+    <div class="workspace-footer"><div class="avatar">CP</div><div>Portfolio workspace<small>Synthetic commerce data</small></div></div>
+  </aside>
+  <main id="overview">
+    <header class="topbar"><div>Workspace <span>/</span> <strong>Overview</strong></div><div class="topbar-right"><span class="demo-label">SYNTHETIC DATA</span><span id="today"></span></div></header>
+    <section class="page-heading"><div><div class="eyebrow">YOUR BUSINESS, IN FOCUS</div><h1>Commerce overview<span>.</span></h1><p>A live view of orders, revenue, and the products behind them.</p></div><div class="connection" id="connection" role="status"><span class="status-dot"></span><span id="connection-text">Connecting…</span></div></section>
+    <section class="toolbar" aria-label="Dashboard controls"><div class="range-controls"><span class="control-label">Time range</span><div class="segmented" aria-label="Time range"><button data-hours="1" aria-pressed="false">1 hour</button><button data-hours="6" aria-pressed="false">6 hours</button><button data-hours="24" aria-pressed="true" class="selected">24 hours</button></div></div><div class="refresh-controls"><label class="auto-label"><input type="checkbox" id="auto-refresh" checked> Auto-refresh <span>15s</span></label><button id="refresh" class="refresh-button"><span aria-hidden="true">↻</span> Refresh</button></div></section>
+    <div id="error" class="error-banner" role="alert" hidden></div>
+    <section class="metrics" aria-label="Key metrics" aria-busy="true" id="metrics">
+      <article class="metric-card revenue-card"><div class="metric-heading">Completed revenue <span>↗</span></div><div class="metric-number" id="revenue">—</div><div class="metric-foot"><span class="metric-pill">INR</span> Successful orders only</div></article>
+      <article class="metric-card"><div class="metric-heading">Total orders <span>▣</span></div><div class="metric-number" id="orders">—</div><div class="metric-foot" id="completed-detail">Waiting for analytics</div></article>
+      <article class="metric-card"><div class="metric-heading">Average order value <span>⌁</span></div><div class="metric-number" id="aov">—</div><div class="metric-foot">Per completed order</div></article>
+      <article class="metric-card"><div class="metric-heading">Order failure rate <span>!</span></div><div class="metric-number" id="failure">—</div><div class="metric-foot" id="failed-detail">Across all valid orders</div></article>
+    </section>
+    <section class="charts-grid">
+      <article class="panel revenue-panel"><div class="panel-heading"><div><h2>Revenue over time</h2><p>Completed orders, grouped by event time</p></div><span class="legend"><i></i> Revenue</span></div><div class="chart-summary"><strong id="chart-total">—</strong><span id="chart-period">in the selected period</span></div><div id="revenue-chart" class="chart" aria-label="Revenue chart loading"></div><div class="chart-caption"><span id="chart-note">Waiting for minute aggregates</span><span id="timezone"></span></div></article>
+      <article class="panel outcomes-panel"><div class="panel-heading"><div><h2>Order outcomes</h2><p>Every order has a story</p></div><span class="subtle-icon">◉</span></div><div class="donut-wrap"><div class="donut" id="outcome-donut"><div class="donut-center"><strong id="donut-total">—</strong><span>total orders</span></div></div></div><div class="outcome-list"><div><span><i class="dot completed"></i>Completed</span><strong id="outcome-completed">—</strong></div><div><span><i class="dot pending"></i>Pending</span><strong id="outcome-pending">—</strong></div><div><span><i class="dot failed"></i>Failed</span><strong id="outcome-failed">—</strong></div></div></article>
+    </section>
+    <section class="panel performance-panel" id="performance"><div class="panel-heading"><div><h2>Performance breakdown</h2><p>See what contributes to completed revenue</p></div><div class="segmented" aria-label="Breakdown dimension"><button data-dimension="product" class="selected" aria-pressed="true">Products</button><button data-dimension="category" aria-pressed="false">Categories</button></div></div><div class="table-scroll"><table><thead><tr><th id="dimension-title">Product</th><th>Orders</th><th>Completed revenue</th><th>Avg. order value</th><th>Failure rate</th></tr></thead><tbody id="performance-body"><tr><td colspan="5" class="empty-cell">Loading performance…</td></tr></tbody></table></div><div class="table-footer"><span id="page-label">Ranked by completed revenue</span><div class="pagination"><button id="previous" disabled aria-label="Previous performance page">←</button><button id="next" disabled aria-label="Next performance page">→</button></div></div></section>
+    <section class="panel anomaly-panel" aria-label="Anomaly detection"><div class="panel-heading"><div><h2>Signals to investigate</h2><p>Explainable checks for failure-rate and revenue spikes</p></div><span class="signal-tag">STATISTICAL BASELINE</span></div><p id="anomaly-status" class="anomaly-status" role="status">Waiting for detector status…</p><div id="anomaly-items" class="anomaly-items"></div><div class="table-footer"><span id="anomaly-note">Checks use the preceding 60 minutes of activity.</span><div class="pagination"><button id="alerts-previous" disabled aria-label="Previous alerts page">←</button><button id="alerts-next" disabled aria-label="Next alerts page">→</button></div></div></section>
+    <footer class="page-footer"><span><span class="footer-dot"></span><span id="freshness">Waiting for first refresh</span></span><span>One-minute aggregates · INR · <a href="/docs">API documentation ↗</a></span></footer>
+    <p class="data-note">Synthetic portfolio data. Late arrivals can revise past minutes. A successful refresh confirms API access, not the health of the full streaming pipeline.</p>
+  </main>
+</body>
+</html>

@@ -6,7 +6,7 @@ For a silent dashboard clip using real local API responses, install
 `tests/requirements-browser.txt`, run `python -m playwright install ffmpeg`
 (also `python -m playwright install chromium` on Linux), then run
 `python scripts/record_demo.py` while the demo is running. The roughly one-minute
-WebM is saved to `runtime/walkthrough/commerce-pulse.webm`. Use a recent demo history
+WebM is saved to `runtime/walkthrough/ab-insights.webm`. Use a recent demo history
 so the one-hour view contains orders. This clip has no narration; use the outline
 below for a longer narrated interview walkthrough.
 

@@ -17,7 +17,7 @@ flowchart LR
     K -->|kafka:19092| S[Spark in Docker]
     S --> A[(PostgreSQL minute analytics + event ledger)]
     A --> API[FastAPI]
-    API --> UI[Commerce Pulse dashboard]
+    API --> UI[AB Insights dashboard]
     A --> D[Statistical anomaly worker]
     D --> AC[(Anomaly checks)]
     AC --> API
@@ -109,7 +109,7 @@ event ledger: zero returned rows means all stored windows and dimensions match.
 
 ### Dashboard
 
-Open **http://localhost:8000/** after starting the API. Commerce Pulse is a responsive
+Open **http://localhost:8000/** after starting the API. AB Insights is a responsive
 dashboard served by FastAPI, with no Node build, external fonts, or chart CDN required.
 It shows completed revenue, order counts, AOV, failure rate, revenue trends, order
 outcomes, and paginated product/category performance. Select 1, 6, or 24 hours;

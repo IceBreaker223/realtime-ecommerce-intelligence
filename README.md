@@ -1,4 +1,4 @@
-# Commerce Pulse
+# AB Insights
 
 ### Real-Time E-Commerce Intelligence
 
@@ -7,9 +7,9 @@ and Spark into PostgreSQL, then become live analytics and explainable anomaly si
 in a FastAPI dashboard. Built to demonstrate correct accounting, replay-safe writes,
 recovery, and evidence—not just connected technologies.
 
-![Commerce Pulse dashboard with synthetic demo data](docs/assets/dashboard-desktop.png)
+![AB Insights dashboard with synthetic demo data](docs/assets/dashboard-desktop.png)
 
-[Watch the 57-second dashboard walkthrough](docs/assets/commerce-pulse.webm)
+[Watch the one-minute dashboard walkthrough](docs/assets/ab-insights.webm)
 (silent recording of the local synthetic demo).
 
 **Python · Kafka · Spark Structured Streaming · PostgreSQL · FastAPI · Docker · SQL**
@@ -69,7 +69,7 @@ flowchart LR
     D --> X[(Anomaly checks)]
     A --> API[FastAPI]
     X --> API
-    API --> UI[Commerce Pulse dashboard]
+    API --> UI[AB Insights dashboard]
 ```
 
 ## Verification and measured evidence

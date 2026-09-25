@@ -41,11 +41,11 @@ def main():
         finally:
             context.close()
             try:
-                video.save_as(str(output / "commerce-pulse.webm"))
+                video.save_as(str(output / "ab-insights.webm"))
                 video.delete()
             finally:
                 browser.close()
-    print(f"Saved silent dashboard walkthrough: {output / 'commerce-pulse.webm'}")
+    print(f"Saved silent dashboard walkthrough: {output / 'ab-insights.webm'}")
 
 
 if __name__ == "__main__":

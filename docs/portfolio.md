@@ -67,11 +67,17 @@ staging, connection pooling, and partitioned state when the workload justifies t
 retention/backfill policy, durable rejected-event handling, observability, failover,
 and workload-specific capacity testing. Those are outside this portfolio release.
 
-## Publishing checklist
+## Publication and presentation
 
-- Review the files and evidence, then commit the repository; this workspace started
-  without any commits, and no remote publication is performed by the setup scripts.
+The project is public at https://github.com/IceBreaker223/realtime-ecommerce-intelligence.
+The README links the recorded walkthrough, engineering guide, and hosted verification.
+
+- Use the repository link when sharing the project; localhost is only your local demo.
 - Keep `.env`, runtime stores, virtual environments, and full service logs out of Git.
-- Push to your chosen repository and verify the first hosted CI run before adding a badge.
-- Link the README, recorded walkthrough, and measured validation report from your CV.
-- Select a license deliberately before presenting the repository as reusable open source.
+- Describe this as a synthetic-data portfolio project developed with AI coding assistance.
+- Explain decisions you understand and demonstrate results you can reproduce.
+- Do not describe the project as unaided work, employer experience, or a production deployment.
+- No open-source license has been selected; public visibility alone does not grant a reuse license.
+
+See the [reviewer guide](reviewer-guide.md) for a concise technical walkthrough and
+[profile wording](professional-profile.md) for reusable career materials.

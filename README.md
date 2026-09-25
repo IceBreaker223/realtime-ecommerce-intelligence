@@ -4,12 +4,28 @@
 
 **A portfolio project by Abhishek Bhattacharya**
 
-[LinkedIn](https://www.linkedin.com/in/abhishek-bhattacharya-9a399a299) ? [GitHub profile](https://github.com/IceBreaker223)
+[LinkedIn](https://www.linkedin.com/in/abhishek-bhattacharya-9a399a299) | [GitHub profile](https://github.com/IceBreaker223)
+
+[![Verify portfolio](https://github.com/IceBreaker223/realtime-ecommerce-intelligence/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/IceBreaker223/realtime-ecommerce-intelligence/actions/workflows/ci.yml)
 
 A runnable data-engineering portfolio project: synthetic orders flow through Kafka
 and Spark into PostgreSQL, then become live analytics and explainable anomaly signals
 in a FastAPI dashboard. Built to demonstrate correct accounting, replay-safe writes,
 recovery, and evidence—not just connected technologies.
+
+**Business question:** What is selling, how much completed revenue is arriving,
+and are order failures or revenue unusually high? AB Insights makes those signals
+visible while protecting totals against duplicate event delivery.
+
+## Review in two minutes
+
+- [Watch the dashboard](docs/assets/ab-insights.webm): a silent recording of the actual local application.
+- [Read the engineering walkthrough](docs/reviewer-guide.md): follow one order and inspect the important code.
+- [Inspect validation](docs/validation.md): 30 automated tests, crash recovery, and contextualized performance results.
+- [Check hosted CI](https://github.com/IceBreaker223/realtime-ecommerce-intelligence/actions/workflows/ci.yml): clean-runner execution, logs, and downloadable reports.
+
+The dashboard runs locally; the video and repository are publicly accessible.
+No live hosted application or real customer traffic is claimed.
 
 ![AB Insights dashboard with synthetic demo data](docs/assets/dashboard-desktop.png)
 
@@ -101,6 +117,11 @@ for the latest result and downloadable evidence.
 | `docs/` | Architecture decisions, runbook, evidence, interview/demo materials |
 
 ## Scope and honest limits
+
+**Development transparency:** This personal project was developed with AI coding
+assistance, including implementation, debugging, documentation, and presentation.
+The code, reproducible checks, and recorded results are available for independent
+inspection. It is not presented as unaided work or professional production experience.
 
 This is a **single-node portfolio system**, not a production deployment. Spark's
 sink stages bounded batches through the driver and serializes database writers.

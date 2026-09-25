@@ -9,6 +9,9 @@ recovery, and evidence—not just connected technologies.
 
 ![Commerce Pulse dashboard with synthetic demo data](docs/assets/dashboard-desktop.png)
 
+[Watch the 57-second dashboard walkthrough](docs/assets/commerce-pulse.webm)
+(silent recording of the local synthetic demo).
+
 **Python · Kafka · Spark Structured Streaming · PostgreSQL · FastAPI · Docker · SQL**
 
 ## Run the complete demo

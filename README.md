@@ -2,6 +2,10 @@
 
 ### Real-Time E-Commerce Intelligence
 
+**A portfolio project by Abhishek Bhattacharya**
+
+[LinkedIn](https://www.linkedin.com/in/abhishek-bhattacharya-9a399a299) ? [GitHub profile](https://github.com/IceBreaker223)
+
 A runnable data-engineering portfolio project: synthetic orders flow through Kafka
 and Spark into PostgreSQL, then become live analytics and explainable anomaly signals
 in a FastAPI dashboard. Built to demonstrate correct accounting, replay-safe writes,
